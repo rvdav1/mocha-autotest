@@ -6,6 +6,7 @@
     "files.autoSave": "onFocusChange",
     "editor.wordWrap": "wordWrapColumn",
     "explorer.openEditors.visible": 40,
+    "git.autofetch": true,
     "sync.gist": "ce43645b2eea0879821a31f5bbd1487a",
     "sync.lastUpload": "2018-03-17T19:42:16.744Z",
     "sync.autoDownload": false,

@@ -1,4 +1,4 @@
-##Prerequisites for this project:
+## Prerequisites for this project:
 - NodeJS (at least v6 with npm 3)
 - VS Code IDE
 
@@ -17,6 +17,6 @@ Please copy and use this ID in other machines to download settings.
 2. Download Key : Shift + Alt + D
 (See more info here: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 
-##Other useful links:
+## Other useful links:
 - MochaJS documentation: https://mochajs.org/
 - Full Settings Sync: http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
