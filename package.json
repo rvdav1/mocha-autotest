@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "mocha-autotest"
+    "url": "https://github.com/AdamKatona/mocha-autotest.git"
   },
   "keywords": [
     "mocha",

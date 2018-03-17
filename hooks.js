@@ -1,3 +1,5 @@
+'use strict';
+
 describe('hooks', function () {
 
     before(function () {
