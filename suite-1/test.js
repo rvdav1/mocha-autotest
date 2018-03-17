@@ -1,19 +1,12 @@
 'use strict';
 
-let assert = require('chai');
-let chai = require("chai");
-let chaiAsPromised = require("chai-as-promised");
+beforeEach(function () {
+    console.log('Opening EPAM site');
+    return driver.get('https://www.epam.com/careers');
+});
 
-chai.use(chaiAsPromised);
-
-let expect = chai.expect;
-
-/**
- * Global hook
- */
-before(function () {
-    console.log('before every test in every file');
-    //open browser somewhere here
+after(function () {
+    return driver.quit();
 });
 
 describe('Array', function () {
@@ -23,7 +16,7 @@ describe('Array', function () {
         });
 
         it('should return 1 when the value is not present', function () {
-            expect([1, 2, 3].indexOf(2)).to.equal(1);
+            expect([1, 2, 3].indexOf(2)).to.equal(2);
         });
-    });    
+    });
 });

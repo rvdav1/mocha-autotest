@@ -4,7 +4,7 @@
   "description": "Basic framework that can be put together quickly to start making automated tests.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha suite-1"
+    "test": "mocha --opts ./mocha.opts suite-1 --require index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "dependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "*",
-    "jasmine": "^2.8.0",
     "mocha": "^4.0.1",
     "selenium-webdriver": "2.53.*",
     "chromedriver": "*"

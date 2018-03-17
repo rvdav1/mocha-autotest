@@ -4,7 +4,7 @@
     "editor.formatOnPaste": true,
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "files.autoSave": "onFocusChange",
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "on",
     "explorer.openEditors.visible": 40,
     "git.autofetch": true,
     "sync.gist": "ce43645b2eea0879821a31f5bbd1487a",

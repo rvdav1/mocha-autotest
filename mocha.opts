@@ -1,0 +1,3 @@
+--ui: 'bdd'
+--assertion: 'chai'
+--timeout 60000
