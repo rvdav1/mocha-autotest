@@ -19,4 +19,4 @@ Please copy and use this ID in other machines to download settings.
 
 ## Other useful links:
 - MochaJS documentation: https://mochajs.org/
-- Full Settings Sync: http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
+- Full Settings Sync documentation: http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
