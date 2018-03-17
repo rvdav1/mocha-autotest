@@ -1,0 +1,8 @@
+.idea/*.xml
+.idea/*.iml
+.idea/.name
+.idea/dictionaries
+.idea/libraries
+.idea/runConfigurations
+.vscode
+node_modules

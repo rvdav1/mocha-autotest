@@ -1,0 +1,30 @@
+{
+  "name": "mocha-autotest",
+  "version": "0.0.1",
+  "description": "Basic framework that can be put together quickly to start making automated tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha suite-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mocha-autotest"
+  },
+  "keywords": [
+    "mocha",
+    "jasmine",
+    "chai",
+    "chai-as-promised",
+    "js"
+  ],
+  "author": "Adam Katona",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "*",
+    "jasmine": "^2.8.0",
+    "mocha": "^4.0.1",
+    "selenium-webdriver": "2.53.*",
+    "chromedriver": "*"
+  }
+}
