@@ -6,7 +6,7 @@
 For generating an install.cmd from your own configs, use the following command line script:
 "for /F "tokens=*" %i in ('code --list-extensions') do @echo call code --install-extension %i >> install.cmd"
 
-Make sure it is inserted as a single line (and remove erroneus lines if any, by editing the .cmd file)
+_Make sure it is inserted as a single line (and remove erroneus lines if any, by editing the .cmd file)_
 
 **ALSO you can use Settings Sync plugin for VS Code (See link for exact description)**
 - GIST ID :  ce43645b2eea0879821a31f5bbd1487a .

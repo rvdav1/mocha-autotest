@@ -41,7 +41,7 @@ describe('Smoke suite', function () {
     });
 
     describe('Checking a search result list', function () {
-        const keyWord = "Test Automation Engineer";        
+        const keyWord = "Test Automation Engineer";
 
         it('When the "Test Automation engineer" keyword is typed into the search field', function () {
             return keyWordOrIDInput.sendKeys(keyWord);
