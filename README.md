@@ -8,8 +8,8 @@ _~From command line/terminal_
 - npm test
 
 **For creating VS Code project and apply configs** used by me in the IDE, run install.cmd
-For generating an install.cmd from your own configs, use the following command line script:
-"for /F "tokens=*" %i in ('code --list-extensions') do @echo call code --install-extension %i >> install.cmd"
+For generating an install.cmd from your own configs, use the following command line script (without the quotes):
+"_for /F "tokens=*" %i in ('code --list-extensions') do @echo call code --install-extension %i >> install.cmd_"
 
 _Make sure it is inserted as a single line (and remove erroneus lines if any, by editing the .cmd file)_
 
