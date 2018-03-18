@@ -2,8 +2,8 @@
 - NodeJS (at least v6 with npm 3)
 - VS Code IDE
 
-### Installing and starting the project:
-_~From command line/terminal~_
+# Installing and starting the project:
+_~From command line/terminal_
 - npm install
 - npm test
 
