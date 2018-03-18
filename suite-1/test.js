@@ -42,6 +42,7 @@ describe('Smoke suite', function () {
 
     describe('Checking a search result list', function () {
         const keyWord = "Test Automation Engineer";
+        const searchResultHeadingLocator = '.search-result__heading';
 
         it('When the "Test Automation engineer" keyword is typed into the search field', function () {
             return keyWordOrIDInput.sendKeys(keyWord);
@@ -51,12 +52,19 @@ describe('Smoke suite', function () {
             findButton.click();
             driver.sleep(6000);
             return driver.wait(function () {
-                return driver.findElement(by.css('.search-result__heading')).isDisplayed();
+                return driver.findElement(by.css(searchResultHeadingLocator)).isDisplayed();
             });
         });
 
         it('Then the search result list heading should contain the searched searchterm', function () {
-            return expect(driver.findElement(by.css('.search-result__heading')).getText()).to.eventually.include(keyWord.toUpperCase());
+            return expect(driver.findElement(by.css(searchResultHeadingLocator)).getText()).to.eventually.include(keyWord.toUpperCase());
+        });
+    });
+
+    describe('Homework', function () {
+        xit('Please choose one task/scenario from prevoius class\' in place of this one and implement it!' +
+            '\n\tMake sure to add a short description in comments as well!', function (){
+
         });
     });
 
