@@ -12,7 +12,6 @@
   },
   "keywords": [
     "mocha",
-    "jasmine",
     "chai",
     "chai-as-promised",
     "js"
@@ -22,7 +21,7 @@
   "dependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "*",
-    "mocha": "^4.0.1",
+    "mocha": "*",
     "selenium-webdriver": "2.53.*",
     "chromedriver": "*"
   }

@@ -1,22 +1,66 @@
 'use strict';
 
-beforeEach(function () {
+before(function () {
     console.log('Opening EPAM site');
-    return driver.get('https://www.epam.com/careers');
+    driver.get('https://www.epam.com/careers');
+    return driver.sleep(4000);
 });
 
-after(function () {
-    return driver.quit();
-});
+describe('Smoke suite', function () {
+    const commonParent = '.section--hide-on-mobile ';
+    let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));
+    let findButton = driver.findElement(by.css(commonParent + '.job-search__submit'));
 
-describe('Array', function () {
-    describe('#indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            expect([1, 2, 3].indexOf(4)).to.equal(-1);
+    describe('Sanity check', function () {
+        let epamLogo = driver.findElement(by.css('.header__logo'));
+        it('EPAM carreer page should open, with a visible logo on the page', function () {
+            return expect(epamLogo.isDisplayed()).to.eventually.be.true;
+        });
+    });
+
+    describe('All the main elements should be visible on Carreer page', function () {
+        let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));
+        let locationDropdown = driver.findElement(by.css(commonParent + '.select-box-selection'));
+        let skillsSelector = driver.findElement(by.css(commonParent + '.multi-select-filter'));
+
+        it('The "Keyword or job ID" input field should be visible', function () {
+            return expect(keyWordOrIDInput.isDisplayed()).to.eventually.be.true;
         });
 
-        it('should return 1 when the value is not present', function () {
-            expect([1, 2, 3].indexOf(2)).to.equal(2);
+        it('The "Location" dropdown should be visible', function () {
+            return expect(locationDropdown.isDisplayed()).to.eventually.be.true;
         });
+
+        it('The "Skills" selector should be visible', function () {
+            return expect(skillsSelector.isDisplayed()).to.eventually.be.true;
+        });
+
+        it('The "Find" button should be visible', function () {
+            return expect(findButton.isDisplayed()).to.eventually.be.true;
+        });
+    });
+
+    describe('Checking a search result list', function () {
+        const keyWord = "Test Automation Engineer";        
+
+        it('When the "Test Automation engineer" keyword is typed into the search field', function () {
+            return keyWordOrIDInput.sendKeys(keyWord);
+        });
+
+        it('And the "Find" button is clicked', function () {
+            findButton.click();
+            driver.sleep(6000);
+            return driver.wait(function () {
+                return driver.findElement(by.css('.search-result__heading')).isDisplayed();
+            });
+        });
+
+        it('Then the search result list heading should contain the searched searchterm', function () {
+            return expect(driver.findElement(by.css('.search-result__heading')).getText()).to.eventually.include(keyWord.toUpperCase());
+        });
+    });
+
+    after(function () {
+        return driver.quit();
     });
 });

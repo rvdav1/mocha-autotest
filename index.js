@@ -26,15 +26,4 @@ let webdriver = require('selenium-webdriver');
 global.by = webdriver.By;
 
 global.driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
-
-global.driver.isElementVisible = function (locator) {
-    return driver.isElementPresent(locator).then(function (present) {
-        if (!present) {
-            return false;
-        }
-        return driver.findElement(locator).isDisplayed().then(null, function () {
-            return false;
-        });
-    });
-};
 global.driver.manage().window().maximize();
