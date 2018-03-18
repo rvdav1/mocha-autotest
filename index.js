@@ -1,6 +1,7 @@
 'use strict';
-require('chromedriver');
 
+require('chromedriver');
+let webdriver = require('selenium-webdriver');
 let chai = require('chai'),
     chaiAsPromised = require('chai-as-promised');
 
@@ -22,8 +23,6 @@ process.on('uncaughtException', function (err) {
     console.log(err);
 });
 
-let webdriver = require('selenium-webdriver');
 global.by = webdriver.By;
-
 global.driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
 global.driver.manage().window().maximize();

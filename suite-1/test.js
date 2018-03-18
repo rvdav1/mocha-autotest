@@ -63,9 +63,9 @@ describe('Smoke suite', function () {
 
     describe('Homework', function () {
         xit('Please choose one task/scenario from prevoius class\' in place of this one and implement it!' +
-            '\n\tMake sure to add a short description in comments as well!', function (){
+            '\n\tMake sure to add a short description in comments as well!', function () {
 
-        });
+            });
     });
 
     after(function () {
