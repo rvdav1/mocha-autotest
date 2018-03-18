@@ -2,6 +2,11 @@
 - NodeJS (at least v6 with npm 3)
 - VS Code IDE
 
+### Installing and starting the project:
+_~From command line/terminal~_
+- npm install
+- npm test
+
 **For creating VS Code project and apply configs** used by me in the IDE, run install.cmd
 For generating an install.cmd from your own configs, use the following command line script:
 "for /F "tokens=*" %i in ('code --list-extensions') do @echo call code --install-extension %i >> install.cmd"
