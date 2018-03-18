@@ -14,12 +14,12 @@ For generating an install.cmd from your own configs, use the following command l
 _Make sure it is inserted as a single line (and remove erroneus lines if any, by editing the .cmd file)_
 
 **ALSO you can use Settings Sync plugin for VS Code (See link for exact description)**
-- GIST ID :  ce43645b2eea0879821a31f5bbd1487a .
+- GIST ID :  _ce43645b2eea0879821a31f5bbd1487a_ .
 - Please copy and use this ID in other machines to download settings.
 
 **Shortcuts:**
-1. Upload Key : Shift + Alt + U
-2. Download Key : Shift + Alt + D
+1. Upload Key : _Shift + Alt + U_
+2. Download Key : _Shift + Alt + D_
 
 ## Other useful links:
 - MochaJS documentation: https://mochajs.org/
