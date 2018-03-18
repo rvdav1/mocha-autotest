@@ -1,7 +1,6 @@
 'use strict';
 
-before(function () {
-    console.log('Opening EPAM site');
+before('Opening EPAM site', function () {
     driver.get('https://www.epam.com/careers');
     return driver.sleep(4000);
 });
@@ -68,7 +67,7 @@ describe('Smoke suite', function () {
             });
     });
 
-    after(function () {
+    after('Closing browser instance', function () {
         return driver.quit();
     });
 });

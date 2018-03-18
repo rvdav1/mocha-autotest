@@ -1,0 +1,63 @@
+<section class="suite">
+    <h1>Smoke suite</h1>
+    <dl>
+        <section class="suite">
+            <h1>Sanity check</h1>
+            <dl>
+                <dt>EPAM carreer page should open, with a visible logo on the page</dt>
+                <dd>
+                    <pre><code>return expect(epamLogo.isDisplayed()).to.eventually.be.true;</code></pre>
+                </dd>
+            </dl>
+        </section>
+        <section class="suite">
+            <h1>All the main elements should be visible on Carreer page</h1>
+            <dl>
+                <dt>The &#x22;Keyword or job ID&#x22; input field should be visible</dt>
+                <dd>
+                    <pre><code>return expect(keyWordOrIDInput.isDisplayed()).to.eventually.be.true;</code></pre>
+                </dd>
+                <dt>The &#x22;Location&#x22; dropdown should be visible</dt>
+                <dd>
+                    <pre><code>return expect(locationDropdown.isDisplayed()).to.eventually.be.true;</code></pre>
+                </dd>
+                <dt>The &#x22;Skills&#x22; selector should be visible</dt>
+                <dd>
+                    <pre><code>return expect(skillsSelector.isDisplayed()).to.eventually.be.true;</code></pre>
+                </dd>
+                <dt>The &#x22;Find&#x22; button should be visible</dt>
+                <dd>
+                    <pre><code>return expect(findButton.isDisplayed()).to.eventually.be.true;</code></pre>
+                </dd>
+            </dl>
+        </section>
+        <section class="suite">
+            <h1>Checking a search result list</h1>
+            <dl>
+                <dt>When the &#x22;Test Automation engineer&#x22; keyword is typed into the search field</dt>
+                <dd>
+                    <pre><code>return keyWordOrIDInput.sendKeys(keyWord);</code></pre>
+                </dd>
+                [8784:9996:0318/181244.173:ERROR:service_manager.cc(157)] Connection InterfaceProviderSpec prevented service: content_renderer
+                from binding interface: blink::mojom::ReportingServiceProxy exposed by: content_browser
+                <dt>And the &#x22;Find&#x22; button is clicked</dt>
+                <dd>
+                    <pre><code>findButton.click();
+driver.sleep(6000);
+return driver.wait(function () {
+    return driver.findElement(by.css(searchResultHeadingLocator)).isDisplayed();
+});</code></pre>
+                </dd>
+                <dt>Then the search result list heading should contain the searched searchterm</dt>
+                <dd>
+                    <pre><code>return expect(driver.findElement(by.css(searchResultHeadingLocator)).getText()).to.eventually.include(keyWord.toUpperCase());</code></pre>
+                </dd>
+            </dl>
+        </section>
+        <section class="suite">
+            <h1>Homework</h1>
+            <dl>
+            </dl>
+        </section>
+    </dl>
+</section>
