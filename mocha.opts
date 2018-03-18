@@ -1,3 +1,6 @@
+--require index.js
 --ui: 'bdd'
 --assertion: 'chai'
 --timeout 60000
+--reporter mochawesome
+--reporter-options reportDir=reports,reportFilename=report

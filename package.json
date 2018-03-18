@@ -4,7 +4,7 @@
   "description": "Basic framework that can be put together quickly to start making automated tests.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --opts ./mocha.opts suite-1 --require index.js --reporter mochawesome --reporter-options reportDir=reports,reportFilename=report"
+    "test": "mocha --opts ./mocha.opts suite-1"
   },
   "repository": {
     "type": "git",
