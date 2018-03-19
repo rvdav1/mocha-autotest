@@ -24,3 +24,4 @@ _Make sure it is inserted as a single line (and remove erroneus lines if any, by
 ## Other useful links:
 - MochaJS documentation: https://mochajs.org/
 - Full Settings Sync documentation: http://shanalikhan.github.io/2015/12/15/Visual-Studio-Code-Sync-Settings.html
+- Useful read: https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/
