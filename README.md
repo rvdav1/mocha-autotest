@@ -1,3 +1,6 @@
+## The orginial project:
+This is just a fork of the original project: https://github.com/AdamKatona/mocha-autotest
+
 ## Prerequisites for this project:
 - NodeJS (at least v6 with npm 3)
 - VS Code IDE
