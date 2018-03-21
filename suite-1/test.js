@@ -8,6 +8,8 @@ before('Opening EPAM site', function () {
 describe('Smoke suite', function () {
     const commonParent = '.section--hide-on-mobile ';
     let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));
+    let locationDropdown = driver.findElement(by.css(commonParent + '.select-box-selection'));
+    let skillsSelector = driver.findElement(by.css(commonParent + '.multi-select-filter'));
     let findButton = driver.findElement(by.css(commonParent + '.job-search__submit'));
 
     describe('Sanity check', function () {
@@ -18,9 +20,7 @@ describe('Smoke suite', function () {
     });
 
     describe('All the main elements should be visible on Carreer page', function () {
-        let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));
-        let locationDropdown = driver.findElement(by.css(commonParent + '.select-box-selection'));
-        let skillsSelector = driver.findElement(by.css(commonParent + '.multi-select-filter'));
+        let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));  
 
         it('The "Keyword or job ID" input field should be visible', function () {
             return expect(keyWordOrIDInput.isDisplayed()).to.eventually.be.true;
@@ -47,6 +47,24 @@ describe('Smoke suite', function () {
             return keyWordOrIDInput.sendKeys(keyWord);
         });
 
+        it('When the "Hungary, Debrecen" location is choosed', function() {
+            locationDropdown.click();
+            driver.sleep(3000);
+            driver.findElement(by.css('li[aria-label="Hungary"]')).click();
+            driver.sleep(3000);
+            return driver.findElement(by.css('li[id$="Debrecen"]')).click();
+        });
+
+        it('When the "Software Test Engineering" is choosed', function() {
+            skillsSelector.click();
+            driver.sleep(3000);
+            let currentSkill = driver
+                .findElement(by.css(commonParent + 'input[data-value="Software Test Engineering"]'));
+            currentSkill.findElement(by.xpath("..")).click();
+            driver.sleep(3000);
+            return skillsSelector.click();
+        });
+
         it('And the "Find" button is clicked', function () {
             findButton.click();
             driver.sleep(6000);
@@ -58,13 +76,6 @@ describe('Smoke suite', function () {
         it('Then the search result list heading should contain the searched searchterm', function () {
             return expect(driver.findElement(by.css(searchResultHeadingLocator)).getText()).to.eventually.include(keyWord.toUpperCase());
         });
-    });
-
-    describe('Homework', function () {
-        xit('Please choose one task/scenario from prevoius class\' in place of this one and implement it!' +
-            '\n\tMake sure to add a short description in comments as well!', function () {
-
-            });
     });
 
     after('Closing browser instance', function () {
