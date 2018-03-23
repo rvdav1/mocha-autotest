@@ -1,3 +1,6 @@
+## Homework:
+Added Location and Skill select tests
+
 ## The orginial project:
 This is just a fork of the original project: https://github.com/AdamKatona/mocha-autotest
 
