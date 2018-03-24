@@ -6,7 +6,7 @@ before('Opening EPAM site', function () {
 });
 
 describe('Smoke suite', function () {
-    const commonParent = '.section--hide-on-mobile ';
+    const commonParent = '.section--hide-on-mobile '; //it is useless lol, but nvm
     let keyWordOrIDInput = driver.findElement(by.css(commonParent + '.job-search__input'));
     let locationDropdown = driver.findElement(by.css(commonParent + '.select-box-selection'));
     let skillsSelector = driver.findElement(by.css(commonParent + '.multi-select-filter'));
@@ -49,19 +49,19 @@ describe('Smoke suite', function () {
 
         it('When the "Hungary, Debrecen" location is choosed', function() {
             locationDropdown.click();
-            driver.sleep(3000);
+            driver.sleep(500);
             driver.findElement(by.css('li[aria-label="Hungary"]')).click();
-            driver.sleep(3000);
+            driver.sleep(500);
             return driver.findElement(by.css('li[id$="Debrecen"]')).click();
         });
 
         it('When the "Software Test Engineering" is choosed', function() {
             skillsSelector.click();
-            driver.sleep(3000);
+            driver.sleep(500);
             let currentSkill = driver
                 .findElement(by.css(commonParent + 'input[data-value="Software Test Engineering"]'));
             currentSkill.findElement(by.xpath("..")).click();
-            driver.sleep(3000);
+            driver.sleep(500);
             return skillsSelector.click();
         });
 
